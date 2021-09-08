@@ -10,6 +10,7 @@ using System.Windows;
 using KingRadio.Model;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Unicode;
@@ -161,29 +162,27 @@ namespace KingRadio.ViewModel
 
         public void FilesStationOpen()
         {
-            if (new FileInfo("Station.json").Exists)
-            {
-                var asd = File.ReadAllText("Station.json");
-                try
-                {
-                    ListUrl = JsonSerializer.Deserialize<IEnumerable<Radiostation>>(asd);
-                }
-                catch (JsonException)
-                {
-                    FilesStationCreate(new List<Radiostation> { new Radiostation() { Name = "Радио Unistar", Url = "https://advertizer.hoster.by/unistar/unistar-128kb/icecast.audio" } });
-                    FilesStationOpen();
-                }
-            }
-            else
-            {
-                FilesStationCreate(new List<Radiostation> { new Radiostation() { Name = "Радио Unistar", Url = "https://advertizer.hoster.by/unistar/unistar-128kb/icecast.audio" } });
-                FilesStationOpen();
-            }
+            using var x = new HttpClient();
+            var y = x.GetAsync($"https://raw.githubusercontent.com/Kingaz22/KingRadio/main/Station.json").Result;
+            var json = y.Content.ReadAsStringAsync().Result;
+
+            ListUrl = JsonSerializer.Deserialize<IEnumerable<Radiostation>>(json);
+
+            //var asd = File.ReadAllText($"https://raw.githubusercontent.com/Kingaz22/KingRadio/main/Station.json");
+            //try
+            //{
+            //    ListUrl = JsonSerializer.Deserialize<IEnumerable<Radiostation>>($"https://raw.githubusercontent.com/Kingaz22/KingRadio/main/Station.json");
+            //}
+            //catch (JsonException)
+            //{
+            //    FilesStationCreate(new List<Radiostation> { new Radiostation() { Name = "Радио Unistar", Url = "https://advertizer.hoster.by/unistar/unistar-128kb/icecast.audio" } });
+            //    FilesStationOpen();
+            //}
         }
 
         public void FilesStationCreate(IEnumerable<Radiostation> a)
         {
-            File.WriteAllText("Station.json", JsonSerializer.Serialize(a, Options));
+            //File.WriteAllText("Station.json", JsonSerializer.Serialize(a, Options));
         }
 
         public void FilesSelectedItemOpen()

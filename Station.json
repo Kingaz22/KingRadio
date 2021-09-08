@@ -5,7 +5,7 @@
   },
   {
     "Name": "Радио Unistar",
-    "Url": "https://advertizer.hoster.by/unistar/unistar-128kb/icecast.audio"
+    "Url": "https://unistar.webcaramba.com/unistar_main128.mp3?radiostatistica=site?hash=1631108448947271"
   },
   {
     "Name": "Русское Радио",
@@ -26,5 +26,9 @@
   {
     "Name": "Радио РОКС",
     "Url": "http://de.streams.radioplayer.by:8000/live"
+  },
+  {
+    "Name": "Радио Релакс",
+    "Url": "http://live.humorfm.by:8000/radiorelax"
   }
 ]
