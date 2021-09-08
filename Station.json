@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Гомель FM",
+    "Url": "https://a1.radioheart.ru:8001/radiogomelfm"
+  },
+  {
+    "Name": "Радио Unistar",
+    "Url": "https://advertizer.hoster.by/unistar/unistar-128kb/icecast.audio"
+  },
+  {
+    "Name": "Русское Радио",
+    "Url": "https://stream.hoster.by/rusradio/russkoe/icecast.audio"
+  },
+  {
+    "Name": "Юмор FM",
+    "Url": "http://live.humorfm.by:8000/veseloe"
+  },
+  {
+    "Name": "Новое Радио",
+    "Url": "https://live.novoeradio.by:444/live/novoeradio_aac128/icecast.audio"
+  },
+  {
+    "Name": "Душевное Радио",
+    "Url": "https://stream.hoster.by/pilotfm/audio/icecast.audio"
+  },
+  {
+    "Name": "Радио РОКС",
+    "Url": "http://de.streams.radioplayer.by:8000/live"
+  }
+]
