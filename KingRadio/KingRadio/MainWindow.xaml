@@ -16,7 +16,7 @@
         xmlns:local="clr-namespace:KingRadio"
         mc:Ignorable="d"
         WindowStyle="None" AllowsTransparency="True" 
-        Title="MainWindow" Height="200" Width="400" MaxWidth="400" MinWidth="400"
+        Title="MainWindow" Height="133" Width="400" MaxWidth="400" MinWidth="400"
         Topmost="{Binding Topmost}" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo>

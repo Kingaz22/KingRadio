@@ -22,5 +22,41 @@ namespace KingRadio.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Play {
+            get {
+                return ((bool)(this["Play"]));
+            }
+            set {
+                this["Play"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SelectedItem {
+            get {
+                return ((string)(this["SelectedItem"]));
+            }
+            set {
+                this["SelectedItem"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Play")]
+        public string PackIcon {
+            get {
+                return ((string)(this["PackIcon"]));
+            }
+            set {
+                this["PackIcon"] = value;
+            }
+        }
     }
 }
